@@ -91,6 +91,32 @@ public class TestController {
         attributes.add(new Attribute().setAttributes("publisher", "IEEE Computer Society"));
         reference.setAttributes(attributes);
         referenceService.createReference(reference);
+        
+        reference = new Reference();
+        reference.setType("Book");
+        reference.setIdentifier("scrum");
+        attributes = new ArrayList();
+        attributes.add(new Attribute().setAttributes("author", "ÖÖÖÖÖÖ"));
+        attributes.add(new Attribute().setAttributes("title", "ÅÅÅÅÅÅ"));
+        attributes.add(new Attribute().setAttributes("year", "1999"));
+        attributes.add(new Attribute().setAttributes("publisher", "ÄÖÅ"));
+        reference.setAttributes(attributes);
+        referenceService.createReference(reference);
+        
+        /*
+        reference = new Reference();
+        reference.setType("Inproceedings");
+        reference.setIdentifier("scrum");
+        attributes = new ArrayList();
+        attributes.add(new Attribute().setAttributes("author", "Kölling, Michael and Barnes, David J."));
+        attributes.add(new Attribute().setAttributes("title", "Enhancing apprentice-based learning of Java"));
+        attributes.add(new Attribute().setAttributes("booktitle", "SIGCSE '04: Proceedings of the 35th SIGCSE technical symposium on Computer science education"));
+        attributes.add(new Attribute().setAttributes("year", "2004"));
+        attributes.add(new Attribute().setAttributes("pages", "286--290"));
+        attributes.add(new Attribute().setAttributes("publisher", "ACM"));
+        reference.setAttributes(attributes);
+        referenceService.createReference(reference);
+        */
     }
     
 }
