@@ -42,7 +42,7 @@ public class LatexGenerator {
                         latex.append("\\\"{AA}");
                         break;
                     case 'å':
-                        latex.append("\\\"{a}");
+                        latex.append("\\\"{aa}");
                         break;
                     default:
                         latex.append(string.charAt(i));
